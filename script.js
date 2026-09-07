@@ -77,7 +77,7 @@ function getDialogTemplate(index){
                     </svg>
                 </div> 
             </div>  
-            <img class="dialog_img" src="./assets/img/${myImgs[index]}" alt="">
+            <img class="dialog_img" src="./assets/images/${myImgs[index]}" alt="">
 
             <div class="back_forward_nav">
                 <div onclick="prevImg(${index})">

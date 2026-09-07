@@ -1,5 +1,5 @@
 let myImgs = [
-  "alaska_1.jpg",
+    "alaska_1.jpg",
     "anime_2.jpg",
     "atmosphere_3.png",
     "blue_4.jpg",
@@ -11,62 +11,62 @@ let myImgs = [
     "snow_leopard_cubs_10.jpg",
     "travel_11.jpg",
     "winter_12.jpg"
-  ];
+];
 
-function init(){
+function init() {
     renderImgs();
 }
 
-function renderImgs(){
+function renderImgs() {
     let contentRef = document.getElementById('content')
-    contentRef.innerHTML ="";
-    
+    contentRef.innerHTML = "";
+
     for (let index = 0; index < myImgs.length; index++) {
         const element = myImgs[index];
-        contentRef.innerHTML += getImgTemplate(element,index)
+        contentRef.innerHTML += getImgTemplate(element, index)
     }
 }
 
-function openDetail(index){
+function openDetail(index) {
     let dialogRef = document.getElementById('dialog');
     dialogRef.classList.remove('d_none');
     dialogRef.innerHTML = getDialogTemplate(index);
 }
 
-function closeDetail(){
+function closeDetail() {
     let dialogRef = document.getElementById('dialog');
     dialogRef.classList.add('d_none');
 }
 
-function getImgTemplate(src,index){
+function getImgTemplate(src, index) {
     return `<img onclick="openDetail(${index})" class="small_img" src="./assets/images/${src}" alt="" srcset="">`
 }
 
-function clickDetail(event){
+function clickDetail(event) {
     event.stopPropagation();
 }
 
-function getCleanTitle(index){
+function getCleanTitle(index) {
     return myImgs[index].split(".")[0];
 }
 
-function nextImg(index){
-    if(index + 1 >= myImgs.length){
+function nextImg(index) {
+    if (index + 1 >= myImgs.length) {
         openDetail(0);
     } else {
         openDetail(index + 1);
     }
 }
 
-function prevImg(index){
-    if(index - 1 < 0){
+function prevImg(index) {
+    if (index - 1 < 0) {
         openDetail(myImgs.length - 1);
     } else {
         openDetail(index - 1);
     }
 }
 
-function getDialogTemplate(index){
+function getDialogTemplate(index) {
     return `<div onclick="clickDetail(event)" class="dialog_content">
             
             <div class="headline">

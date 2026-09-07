@@ -1,16 +1,16 @@
 let myImgs = [
-    "alaska-810433_1280.jpg",
-    "anime-8788959_1280.jpg",
-    "atmosphere-8752835_1280.png",
-    "blue-tit-8521052_1280.jpg",
-    "hurricane-92968_1280.jpg",
-    "lake-2896379_1280.jpg",
-    "moorente-8783210_1280.jpg",
-    "sea-2563389_1280.jpg",
-    "snow-bunting-6781122_1280.jpg",
-    "snow-leopard-cubs-8039138_1280.jpg",
-    "travel-8785493_1280.jpg",
-    "winter-1675197_1280.jpg"
+  "alaska_1.jpg",
+    "anime_2.jpg",
+    "atmosphere_3.png",
+    "blue_4.jpg",
+    "hurricane_5.jpg",
+    "lake_6.jpg",
+    "moorente_7.jpg",
+    "sea_8.jpg",
+    "snow_bunting_9.jpg",
+    "snow_leopard_cubs_10.jpg",
+    "travel_11.jpg",
+    "winter_12.jpg"
   ];
 
 function init(){
@@ -39,7 +39,7 @@ function closeDetail(){
 }
 
 function getImgTemplate(src,index){
-    return `<img onclick="openDetail(${index})" class="small_img" src="./assets/img/${src}" alt="" srcset="">`
+    return `<img onclick="openDetail(${index})" class="small_img" src="./assets/images/${src}" alt="" srcset="">`
 }
 
 function clickDetail(event){

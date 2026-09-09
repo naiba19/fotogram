@@ -39,7 +39,7 @@ function closeDetail() {
 }
 
 function getImgTemplate(src, index) {
-    return `<img onclick="openDetail(${index})" class="small_img" src="./assets/images/${src}" alt="" srcset="">`
+    return `<img onclick="openDetail(${index})" class="small_img" src="./assets/images/${src}" alt="${src}" srcset="">`
 }
 
 function clickDetail(event) {

@@ -12,7 +12,20 @@ let myImgs = [
     "travel_11.jpg",
     "winter_12.jpg"
 ];
-
+let myAlts = [
+    "Lake surrounded by mountains in Alaska",
+    "City street at night",
+    "Dark storm clouds in the sky",
+    "Blue tit sitting on a branch",
+    "Hurricane seen from above",
+    "Snowy mountain lake",
+    "Duck swimming in a lake",
+    "Person standing on a rock at night",
+    "Snow bunting sitting on a rock",
+    "Snow leopard cubs sitting on a rock",
+    "Snowy mountain landscape",
+    "Frost-covered tree in a snowy landscape"
+];
 
 function init() {
     renderImgs();
@@ -40,7 +53,7 @@ function closeDetail() {
 }
 
 function getImgTemplate(src, index) {
-  return `<img onclick="openDetail(${index})" onkeydown="if(event.key === 'Enter') openDetail(${index})" class="small_img" src="./assets/images/${src}" alt="${src}" tabindex="0">`
+  return `<img onclick="openDetail(${index})" onkeydown="if(event.key === 'Enter') openDetail(${index})" class="small_img" src="./assets/images/${src}" alt="${myAlts[index]}" tabindex="0">`
 }
 
 function clickDetail(event) {
@@ -78,7 +91,7 @@ function getDialogTemplate(index) {
                     </svg>
                 </div> 
             </div>  
-            <img class="dialog_img" src="./assets/images/${myImgs[index]}" alt="">
+            <img class="dialog_img" src="./assets/images/${myImgs[index]}" alt="${myAlts[index]}"
 
             <div class="back_forward_nav">
                 <div onclick="prevImg(${index})" tabindex="0" onkeyup="if(event.key === 'Enter') prevImg(${index})">

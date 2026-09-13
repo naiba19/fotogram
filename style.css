@@ -73,16 +73,16 @@ main {
     flex-direction: column;
     background-color: var(--bg_darkblue_dark);
     min-height: calc(100vh - 96px);
-    justify-content: space-between;
- 
+
+
 }
 
 main>h2 {
     text-align: center;
     font-weight: 800;
     font-size: 50px;
-    margin-top: 256px;
- }
+    margin-top: 80px;
+}
 
 #content {
     width: 1170px;
@@ -117,8 +117,14 @@ main>h2 {
         100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
-
-
+.small_img:focus {
+    outline: 3px solid var(--prime_blue);
+    outline-offset: 4px;
+}
+.back_forward_nav > div:focus {
+    outline: 3px solid var(--prime_blue);
+    outline-offset: 4px;
+}
 .d_none {
     display: none !important;
 }
@@ -171,6 +177,7 @@ main>h2 {
 
 }
 
+
 .headline {
     width: 100%;
     display: flex;
@@ -198,8 +205,8 @@ main>h2 {
 .dialog_img {
     max-height: 70%;
     max-width: 100%;
-   
-   object-fit: contain;
+
+    object-fit: contain;
     box-shadow:
         2.8px 2.8px 2.2px rgba(0, 0, 0, 0.048),
         6.7px 6.7px 5.3px rgba(0, 0, 0, 0.059),
@@ -226,14 +233,14 @@ main>h2 {
     background-color: var(--bg_blue_light);
     border-radius: 100%;
     background-color: rgba(253, 91, 79, 0.1);
-    
+
 }
 
 .back_forward_nav>div:hover {
     transition: all 200ms ease-in-out;
     cursor: pointer;
     background-color: rgba(253, 91, 79, 0.2);
-    
+
 }
 
 .back_forward_nav>div>svg {
@@ -280,12 +287,12 @@ header {
 
 footer {
     height: 100px;
-    background-color:var(--bg_darkblue_light);
+    background-color: var(--bg_darkblue_light);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-     padding: 64px 16px;
+    padding: 64px 16px;
 }
 
 .footer_logo {

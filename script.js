@@ -13,6 +13,7 @@ let myImgs = [
     "winter_12.jpg"
 ];
 
+
 function init() {
     renderImgs();
 }
@@ -39,7 +40,7 @@ function closeDetail() {
 }
 
 function getImgTemplate(src, index) {
-    return `<img onclick="openDetail(${index})" class="small_img" src="./assets/images/${src}" alt="${src}" srcset="">`
+  return `<img onclick="openDetail(${index})" onkeydown="if(event.key === 'Enter') openDetail(${index})" class="small_img" src="./assets/images/${src}" alt="${src}" tabindex="0">`
 }
 
 function clickDetail(event) {
@@ -80,7 +81,7 @@ function getDialogTemplate(index) {
             <img class="dialog_img" src="./assets/images/${myImgs[index]}" alt="">
 
             <div class="back_forward_nav">
-                <div onclick="prevImg(${index})">
+                <div onclick="prevImg(${index})" tabindex="0" onkeyup="if(event.key === 'Enter') prevImg(${index})">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_84_1828" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
                             height="24">
@@ -94,7 +95,7 @@ function getDialogTemplate(index) {
                     </svg>
                 </div>
                 <p class="img_count">${index + 1}/${myImgs.length}</p>
-                <div onclick="nextImg(${index})">
+                <div onclick="nextImg(${index})" tabindex="0" onkeyup="if(event.key === 'Enter') nextImg(${index})">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_84_1828" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
                             height="24">

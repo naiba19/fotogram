@@ -316,3 +316,21 @@ footer>p {
     font-size: 14px;
     color: #94A3AA;
 }
+
+@media (max-width: 600px) {
+main {
+    padding: 0 24px;
+}
+main > h2 {
+    font-size: 40px;
+}
+#content {
+    width: 100%;
+    margin: 64px auto;
+    gap: 16px;
+}
+.small_img {
+    width: 128px;
+    height: 128px;
+}
+}

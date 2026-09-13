@@ -204,8 +204,7 @@ main>h2 {
 
 .dialog_img {
     max-height: 70%;
-    max-width: 100%;
-
+   max-width: 100%;
     object-fit: contain;
     box-shadow:
         2.8px 2.8px 2.2px rgba(0, 0, 0, 0.048),
@@ -218,9 +217,11 @@ main>h2 {
 
 .back_forward_nav {
     width: 100%;
+
     display: flex;
     justify-content: center;
     gap: 64px;
+    align-items: center;
 }
 
 .back_forward_nav>div {
